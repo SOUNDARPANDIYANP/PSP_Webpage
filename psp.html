@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Luxury E-Commerce</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#0f0f0f;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    header{
+      position:fixed;
+      top:0;
+      width:100%;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background:rgba(0,0,0,0.6);
+      backdrop-filter:blur(10px);
+      z-index:1000;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:700;
+      color:#ffd700;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:25px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#ffd700;
+    }
+
+    .hero{
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 8%;
+      background:linear-gradient(to right,#000,#1a1a1a);
+    }
+
+    .hero-text{
+      max-width:600px;
+    }
+
+    .hero-text h1{
+      font-size:60px;
+      line-height:1.1;
+      margin-bottom:20px;
+    }
+
+    .hero-text span{
+      color:#ffd700;
+    }
+
+    .hero-text p{
+      color:#ccc;
+      margin-bottom:30px;
+      line-height:1.6;
+    }
+
+    .btn{
+      padding:14px 35px;
+      background:#ffd700;
+      color:black;
+      border:none;
+      border-radius:40px;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 10px 25px rgba(255,215,0,0.4);
+    }
+
+    .hero img{
+      width:450px;
+      animation:float 3s ease-in-out infinite;
+    }
+
+    @keyframes float{
+      0%,100%{
+        transform:translateY(0);
+      }
+      50%{
+        transform:translateY(-15px);
+      }
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:40px;
+      margin:80px 0 40px;
+    }
+
+    .products{
+      padding:0 8% 80px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#1b1b1b;
+      border-radius:20px;
+      overflow:hidden;
+      transition:0.4s;
+      position:relative;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 15px 30px rgba(255,215,0,0.2);
+    }
+
+    .card img{
+      width:100%;
+      height:280px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    .card-content h3{
+      margin-bottom:10px;
+    }
+
+    .price{
+      color:#ffd700;
+      font-size:20px;
+      margin-bottom:15px;
+    }
+
+    .features{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:25px;
+      padding:0 8% 80px;
+    }
+
+    .feature-box{
+      background:#1a1a1a;
+      padding:30px;
+      border-radius:20px;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .feature-box:hover{
+      background:#222;
+      transform:translateY(-8px);
+    }
+
+    .feature-box h3{
+      margin:15px 0;
+      color:#ffd700;
+    }
+
+    footer{
+      background:#050505;
+      padding:40px 8%;
+      text-align:center;
+      color:#aaa;
+    }
+
+    @media(max-width:900px){
+
+      .hero{
+        flex-direction:column;
+        justify-content:center;
+        text-align:center;
+        padding-top:120px;
+      }
+
+      .hero-text h1{
+        font-size:42px;
+      }
+
+      .hero img{
+        width:320px;
+        margin-top:40px;
+      }
+
+      nav{
+        display:none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">LUXE.</div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Collections</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+
+    <div class="hero-text">
+      <h1>Discover <span>Luxury</span> Fashion</h1>
+
+      <p>
+        Premium quality products with modern design,
+        smooth shopping experience, and exclusive collections.
+      </p>
+
+      <button class="btn">Shop Now</button>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200&auto=format&fit=crop" alt="Fashion">
+  </section>
+
+  <h2 class="section-title">Trending Products</h2>
+
+  <section class="products">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="card-content">
+        <h3>Premium Sneakers</h3>
+        <div class="price">$149</div>
+        <button class="btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="card-content">
+        <h3>Luxury T-Shirt</h3>
+        <div class="price">$79</div>
+        <button class="btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="card-content">
+        <h3>Classic Watch</h3>
+        <div class="price">$299</div>
+        <button class="btn">Add to Cart</button>
+      </div>
+    </div>
+
+  </section>
+
+  <h2 class="section-title">Why Choose Us</h2>
+
+  <section class="features">
+
+    <div class="feature-box">
+      <h3>Premium Quality</h3>
+      <p>Top-class materials and elegant craftsmanship.</p>
+    </div>
+
+    <div class="feature-box">
+      <h3>Fast Delivery</h3>
+      <p>Quick and secure shipping worldwide.</p>
+    </div>
+
+    <div class="feature-box">
+      <h3>Secure Payment</h3>
+      <p>100% secure and trusted payment methods.</p>
+    </div>
+
+    <div class="feature-box">
+      <h3>24/7 Support</h3>
+      <p>Dedicated support anytime you need help.</p>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2026 LUXE. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
+Difficulty in Raising New Funds:
+style.css
+<style>
+...
+</style>
+<link rel="stylesheet" href="style.css">
+script.js
+const buttons = document.querySelectorAll(".btn");
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    alert("Product added to cart!");
+  });
+});
+<script src="script.js"></script>
+<div class="card">
+</div>
+html{
+  scroll-behavior:smooth;
+}
+
+.card{
+  animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+images
+<img src="images/shoe.jpg">
